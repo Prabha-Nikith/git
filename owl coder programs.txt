@@ -1,0 +1,302 @@
+p,r,t=map(int,input().split())
+CI= p*(1 + (r / 100))**(t)
+print(f"{CI:.2f}")
+------------------------------------
+
+n=int(input())
+if(n%2==0):
+    print("Even")
+else:
+    print("Odd")
+------------------------------------
+n,m=map(int,input().split())
+avg=(n+m)/2
+print(f"{avg:.4f}")
+----------------------------------
+a,b,c=map(int,input().split())
+s=(a+b+c)/(2)
+a=(s*(s-a)*(s-b)*(s-c))**(1/2)
+print(f"{a:.2f}")
+---------------------------------
+import math
+n=int(input())
+s=int(math.sqrt(n))
+a=(s*s)
+if(a==n):
+    print("True")
+else:
+    print("False")
+-----------------------------------------
+
+n=int(input())
+m=int(input())
+s=n%m
+print(s)
+--------------------------------------
+c=int(input())
+f=((9/5)*c)+32
+print(f"{f:.2f}")
+------------------------------
+f=int(input())
+c=(f-32)*(5/9)
+print(f"{c:.2f}")
+---------------------------------
+n=input() [::-1]
+print(n)
+------------------------------
+n=input()
+if(len(n)>=10):
+    print("Valid")
+else:
+    print("Invalid")
+-----------------------------------
+n=int(input())
+k=n*2.2
+print(f"{k:.2f}")
+------------------------------------
+ ELEMENT SEARCH IN ARRAY:
+
+def search(n,arr,s):
+    array=set(arr)
+    for i in range(0,n+1):
+        if s in array:
+            return True
+    return False
+n=int(input())
+arr=list(map(int,input().split()))
+s= int(input())
+v=search(n,arr,s)
+print(v)
+
+------------------------------------
+ POWER OF A NUMBER:
+
+import math
+x,y,M= map(int,input().split())
+s=math.pow(x,y)
+print(int(s%M))
+
+------------------------------------
+  MISSING NUMBER:
+
+def missing(arr,n):
+    array=set(arr)
+    for i in range(1,n+1):
+        if i not in array:
+            return i
+n=int(input())
+arr=list(map(int,input().split()))
+print(missing(arr,n))
+
+--------------------------------------------
+  LARGEST DIGIT:
+
+n=input()
+s=max(n)
+print(s)
+
+--------------------------------------------
+  EVEN OR ODD:
+
+def odd(n):
+    if(n%2==0):
+        return "Even"
+    elif(n%2!=0):
+        return "Odd"
+    else:
+        return False
+n=int(input())
+print(odd(n))
+
+-----------------------------------------
+ PROFIT OR LOSS:
+
+def profit(c,s):
+    if(s>c or c<s):
+        return "Profit"
+    elif(c>s or s<c):
+        return "Loss"
+    else:
+        return "No profit and No loss"
+c=int(input())
+s=int(input())
+print(profit(c,s))
+------------------------------------------
+AREA ND PERIMETER OF CIRCLE:
+n=int(input())
+a=3.14*n*n
+p=2*3.14*n
+print(f"{a:.2f}")
+print(f"{p:.2f}")
+----------------------------------
+ARRAYS ARE EQUAL OR NOT :
+
+n=int(input())
+num1=list(map(int,input().split()))
+num2=list(map(int,input().split()))
+num1.sort()
+num2.sort()
+s=0
+m=0
+for i in range(len(num1)):
+    s=s+num1[i]
+for j in range(len(num2)):
+    m=m+num2[j]
+if(s==m):
+    print("1")
+else:
+    print("0")
+-----------------------------------------
+PRINT THE FOLLOWING PATTERN 13:
+
+n=int(input())
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end='')
+    print('')
+---------------------------------------------
+EXPENDITURE:
+
+x=int(input())
+y=int(input())
+s=y*30
+if(s<=x):
+    print("YES")
+else:
+    print("NO")
+------------------------------------------
+AMSTRONG NUMBER:
+
+n=int(input())
+m=n
+s=0
+while n!=0:
+    r=n%10
+    s+=r*r*r
+    n//=10
+if(s==m):
+    print("Yes")
+else:
+    print("No")
+-----------------------------------------------
+LAMPS:
+
+N,K,X,Y=map(int,input().split())
+c=K*X
+a=N-K
+if(X<Y):
+    c+=a*X
+else:
+    c+=a*Y
+print(c)
+-----------------------------------------------
+BANK ACCOUNT:
+
+w,x,y,z=map(int,input().split())
+s=w+(x*z)-(y*z)
+print(s)
+------------------------------------------------
+IF ARRAY IS SORTED OR NOT:
+
+n=int(input())
+num=list(map(int,input().split()))
+if(num==sorted(num)):
+    print("1")
+else:
+    print("0")
+----------------------------------------------
+SUM OF FACTORS:
+
+n=int(input())
+c=0
+for i in range(1,n):
+    if(n%i==0):
+        c+=i
+print(c)
+------------------------------------
+FIRST EVEN NATURAL NUMBERS:
+
+n=int(input())
+for i in range(n*2,0,-1):
+    if(i%2==0):
+        print(i, end=" ")
+------------------------------------------
+WIERD OR NOT :
+
+n=int(input())
+if(n%2!=0):
+    print("weird")
+elif(n%2==0 and n>2 and n<5):
+    print("not weird")
+elif(n%2==0 and n>6 and n<20):
+    print("weird")
+elif(n%2==0 and n>20):
+    print("not weird")
+else:
+    print("-1")
+-------------------------------------------------
+AREA OF A TRAPEZIUM:
+
+b1=int(input())
+b2=int(input())
+h=int(input())
+area = 0.5*(b1 + b2)*h
+print(f"{area:.4f}")
+-----------------------------------------------
+
+COFFEE LOVE:
+ import java.util.*;
+public class coffee
+{
+    public static void main(String args[])
+    {
+     Scanner sc=new Scanner(System.in);
+     int n=sc.nextInt();
+     for( int i=0;i<n;i++)
+     {
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        if(a>b)
+        {
+            System.out.println(b);
+        }
+        else
+        {
+            System.out.println(a);
+        }
+     }
+    }
+}
+
+-----------------------------------------
+SUM OF AN ARRAY IN GIVEN RANGE:
+
+n=int(input())
+num=list(map(int,input().split()))
+s=int(input())
+r=int(input())
+k=0
+for i in range(s,r+1):
+    k=num[i]+k
+print(k)
+----------------------------------------------
+FACTORIAL OF A GIVEN NUMBER:
+
+n=int(input())
+s=1
+for i in range(1,n+1):
+    s=s*i
+print(s)
+---------------------------------
+REDUCE TO ZERO:
+
+n=int(input())
+c=0
+while n>0:
+    if(n%2==0):
+        n=n//2
+    else:
+        n=n-1
+    c+=1
+print(c)
+----------------------------------------
